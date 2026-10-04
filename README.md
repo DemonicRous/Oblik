@@ -23,7 +23,7 @@ Requirements: a 64-bit **JDK 21** and an internet connection for the first build
 | Run client | `.\gradlew.bat runClient` | `./gradlew runClient` |
 | Run server | `.\gradlew.bat runServer` | `./gradlew runServer` |
 
-Set `JAVA_HOME` to your JDK 21 installation if necessary. The client uses `run/`; the dedicated server uses `run-server/`. Server startup requires you to read and accept the [Minecraft EULA](https://aka.ms/MinecraftEULA) yourself in the generated `run-server/eula.txt`.
+Set `JAVA_HOME` to your JDK 21 installation if necessary. The client uses `run/`; the dedicated server uses `run-server/`. NeoForge development runs bypass the EULA check and may not generate `eula.txt`. For a normal dedicated server installation, read and accept the [Minecraft EULA](https://aka.ms/MinecraftEULA) yourself in its generated `eula.txt`; this project does not accept it on your behalf.
 
 Build output: `build/libs/Oblik-1.21.1-0.0.1.jar`. Minecraft and mod versions are separate properties in `gradle.properties`. GitHub Actions builds each push and pull request and stores the JAR as an artifact; these artifacts are development builds, not releases.
 
@@ -44,6 +44,6 @@ Oblik — мод для Minecraft **1.21.1** на **NeoForge**. Цель про�
 
 Нужны 64-битный **JDK 21** и подключение к интернету для первой сборки. Используйте Gradle Wrapper из репозитория; устанавливать Gradle отдельно не требуется. Команды сборки и запуска приведены в таблице выше.
 
-При необходимости укажите путь к JDK 21 в `JAVA_HOME`. Клиент запускается в `run/`, сервер — в `run-server/`. Перед полноценным запуском сервера самостоятельно ознакомьтесь с [Minecraft EULA](https://aka.ms/MinecraftEULA) и примите её в созданном файле `run-server/eula.txt`.
+При необходимости укажите путь к JDK 21 в `JAVA_HOME`. Клиент запускается в `run/`, сервер — в `run-server/`. В среде разработки NeoForge проверка EULA обходится, и файл `eula.txt` может не создаваться. Для обычной установки выделенного сервера самостоятельно ознакомьтесь с [Minecraft EULA](https://aka.ms/MinecraftEULA) и примите её в созданном сервером файле `eula.txt`; проект не принимает соглашение за вас.
 
 Результат сборки: `build/libs/Oblik-1.21.1-0.0.1.jar`. Версии Minecraft и мода задаются отдельно в `gradle.properties`. GitHub Actions собирает каждый push и pull request и сохраняет JAR как артефакт разработки. Публичных релизов пока нет.
